@@ -97,3 +97,14 @@ console.log(selectedColor); //output 1
 
 // console.log(StatusCodes.ServerErrors);
 
+//? Any Type
+
+let d : any = 4
+d= "Hello"
+d = false
+
+let anyArray: any [] = [1, "Hello"]
+
+anyArray.push(true)
+
+let e : boolean = d 
