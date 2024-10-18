@@ -47,12 +47,12 @@ let leerArray: string[] = [] //* Leer array deffinition
 
 //? tuples array
 
-let myTuple3 : [number, string][]
+// let myTuple3 : [number, string][]
 
-myTuple3 = [[1, "john"], [2, "smith"]]
+// myTuple3 = [[1, "john"], [2, "smith"]]
 
-myTuple3.push(["jane", 4]) //* error
-myTuple3.push([4, "jane"]) //* richtige definition muss die reihe auch stimmen
+// myTuple3.push(["jane", 4]) //* error
+// myTuple3.push([4, "jane"]) //* richtige definition muss die reihe auch stimmen
 
 //? Enum
 
