@@ -44,7 +44,6 @@
 // myTuple2.push("admin")
 // myTuple2.push(false) //* error boolean ist nicht definiert
 
-
 //? tuples array
 
 // let myTuple3 : [number, string][]
@@ -65,7 +64,7 @@
 
 //  console.log(selectedColor); //output 1
 
- /* //? ohne const js
+/* //? ohne const js
  var Color;
 (function (Color) {
     Color[Color["Red"] = 0] = "Red";
@@ -76,7 +75,6 @@ let selectedColor = Color.Green;
 console.log(selectedColor); //output 1
  */
 
-
 // enum Tshirt {
 //     Small ="S",
 //     Medium = "M",
@@ -85,7 +83,6 @@ console.log(selectedColor); //output 1
 
 // let userSize : Tshirt = Tshirt.Small
 // console.log(userSize);
-
 
 // enum StatusCodes {
 //     NotFound = 404,
@@ -99,12 +96,30 @@ console.log(selectedColor); //output 1
 
 //? Any Type
 
-let d : any = 4
-d= "Hello"
-d = false
+// let d: any = 4;
+// d = "Hello";
+// d = false;
 
-let anyArray: any [] = [1, "Hello"]
+// let anyArray: any[] = [1, "Hello"];
 
-anyArray.push(true)
+// anyArray.push(true);
 
-let e : boolean = d 
+// let e: boolean = d;
+
+
+//? Unknown
+
+// let notSure: unknown = 4
+// notSure = "Hello"
+
+// console.log((notSure as string).length); //*allias
+// console.log((<string>notSure).length); //* generic
+
+//? void (Funktion ohne rückgabe)
+
+let f : number = 100
+function increase () : void{
+    f++
+}
+increase()
+

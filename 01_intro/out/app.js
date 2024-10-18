@@ -39,15 +39,15 @@
 //  let selectedColor : Color = Color.Green
 //  console.log(selectedColor); //output 1
 /* //? ohne const js
-var Color;
+ var Color;
 (function (Color) {
-   Color[Color["Red"] = 0] = "Red";
-   Color[Color["Green"] = 1] = "Green";
-   Color[Color["Blue"] = 2] = "Blue";
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
 })(Color || (Color = {}));
 let selectedColor = Color.Green;
 console.log(selectedColor); //output 1
-*/
+ */
 // enum Tshirt {
 //     Small ="S",
 //     Medium = "M",
@@ -64,9 +64,20 @@ console.log(selectedColor); //output 1
 // }
 // console.log(StatusCodes.ServerErrors);
 //? Any Type
-let d = 4;
-d = "Hello";
-d = false;
-let anyArray = [1, "Hello"];
-anyArray.push(true);
-let e = d;
+// let d: any = 4;
+// d = "Hello";
+// d = false;
+// let anyArray: any[] = [1, "Hello"];
+// anyArray.push(true);
+// let e: boolean = d;
+//? Unknown
+// let notSure: unknown = 4
+// notSure = "Hello"
+// console.log((notSure as string).length); //*allias
+// console.log((<string>notSure).length); //* generic
+//? void 
+let f = 100;
+function increase() {
+    f++;
+}
+increase();
