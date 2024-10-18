@@ -26,7 +26,7 @@
 
 // num.push(4)
 
-let leerArray: string[] = [] //* Leer array deffinition
+// let leerArray: string[] = [] //* Leer array deffinition
 
 //? Tuples
 
@@ -56,11 +56,44 @@ let leerArray: string[] = [] //* Leer array deffinition
 
 //? Enum
 
-enum Color {
-    Red, //0
-    Green,//1
-    Blue,//2
-}
- let selectedColor : Color = Color.Green
+// const enum Color {
+//     Red, //0
+//     Green,//1
+//     Blue,//2
+// }
+//  let selectedColor : Color = Color.Green
 
- console.log(selectedColor); //output 1
+//  console.log(selectedColor); //output 1
+
+ /* //? ohne const js
+ var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+let selectedColor = Color.Green;
+console.log(selectedColor); //output 1
+ */
+
+
+// enum Tshirt {
+//     Small ="S",
+//     Medium = "M",
+//     Large = "L"
+// }
+
+// let userSize : Tshirt = Tshirt.Small
+// console.log(userSize);
+
+
+// enum StatusCodes {
+//     NotFound = 404,
+//     Success = 200,
+//     Accepted = Success +2,
+//     BadRequest = NotFound - 4,
+//     ServerErrors
+// }
+
+// console.log(StatusCodes.ServerErrors);
+

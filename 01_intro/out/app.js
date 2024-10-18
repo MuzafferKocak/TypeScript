@@ -1,32 +1,30 @@
 // console.log("Hello world");
-// let x = 5 //* x ist 5
-// //* Hello
-// let y = "Hello"
-// const z = (a,b,c)=> a+b
-//? Type Annotation
-// let a: number = 5;
-// let b: string = "Hello";
-// let c = false;
-// c = true;
-//? Data Type - Arrays
-// let num: number[] = [1, 2, 3];
-// let num2: Array<string> = ["a", "b",
-//     "c"
-// ]  //* Generic Array
-// num.push(4)
-let leerArray = []; //* Leer array deffinition
-//? Tuples
-// let myTuple: [string, number, boolean]
-// myTuple = ["admin", 1, true, ]
-// myTuple = ["circle", 3.14, false]
-// myTuple.push(4) //* No error
-// let myTuple2: [number, string]
-// myTuple2 = [0, "user"]
-// myTuple2.push(1)
-// myTuple2.push("admin")
-// myTuple2.push(false) //* error boolean ist nicht definiert
-//? tuples array
-let myTuple3;
-myTuple3 = [[1, "john"], [2, "smith"]];
-myTuple3.push(["jane", 4]); //* error
-myTuple3.push([4, "jane"]); //* richtige definition muss die reihe auch stimmen
+let selectedColor = 1 /* Color.Green */;
+console.log(selectedColor); //output 1
+/* //? ohne const js
+var Color;
+(function (Color) {
+   Color[Color["Red"] = 0] = "Red";
+   Color[Color["Green"] = 1] = "Green";
+   Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+let selectedColor = Color.Green;
+console.log(selectedColor); //output 1
+*/
+var Tshirt;
+(function (Tshirt) {
+    Tshirt["Small"] = "S";
+    Tshirt["Medium"] = "M";
+    Tshirt["Large"] = "L";
+})(Tshirt || (Tshirt = {}));
+let userSize = Tshirt.Small;
+console.log(userSize);
+var StatusCodes;
+(function (StatusCodes) {
+    StatusCodes[StatusCodes["NotFound"] = 404] = "NotFound";
+    StatusCodes[StatusCodes["Success"] = 200] = "Success";
+    StatusCodes[StatusCodes["Accepted"] = 202] = "Accepted";
+    StatusCodes[StatusCodes["BadRequest"] = 400] = "BadRequest";
+    StatusCodes[StatusCodes["ServerErrors"] = 401] = "ServerErrors";
+})(StatusCodes || (StatusCodes = {}));
+console.log(StatusCodes.ServerErrors);
