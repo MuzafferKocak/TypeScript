@@ -75,9 +75,19 @@ console.log(selectedColor); //output 1
 // notSure = "Hello"
 // console.log((notSure as string).length); //*allias
 // console.log((<string>notSure).length); //* generic
-//? void 
-let f = 100;
-function increase() {
-    f++;
-}
-increase();
+//? void Type (Funktion ohne rückgabe)
+// let f : number = 100
+// function increase () : void{
+//     f++
+// }
+// increase()
+//? Never Type (Funktion die nie zurück gibt)
+// function endlessLoop () : never {
+//     while(true){
+//         console.log("Hello");
+//     }
+// }
+//? union Type 
+// let g : string | number = 100
+// g = "Hello"
+// g = true  //* Compiler error
