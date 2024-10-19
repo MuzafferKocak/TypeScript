@@ -1,23 +1,15 @@
 console.log("Hello");
-//! Classes Beispiel
-// class Employee {
-//   empCode: number;
-//   empName: string;
-//   constructor(code: number, name: string) {
-//     this.empCode = code;
-//     this.empName = name;
-//   }
-// }
-// let emp1 = new Employee(1, "Markus")
-// console.log(emp1);
-//! Interface
-// interface Point {
-//     x:number
-// }
-// interface Point {
-//     y: number
-// }
-// const point1: Point = {
-//     x:30,
-//     y:50
-// }
+function calculateArea(shape) {
+    switch (shape.kind) {
+        case "circle":
+            return Math.PI * Math.pow(shape.radius, 2);
+        case "rectangle":
+            return shape.width * shape.height;
+        default:
+            throw new Error("Invalid Shape");
+    }
+}
+const myCircle = { kind: "circle", radius: 10 };
+const myRect = { kind: "rectangle", width: 4, height: 5 };
+console.log(calculateArea(myCircle));
+console.log(calculateArea(myRect));
