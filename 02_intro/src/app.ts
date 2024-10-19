@@ -14,3 +14,20 @@ console.log("Hello");
 // let emp1 = new Employee(1, "Markus")
 
 // console.log(emp1);
+
+//! Interface
+
+// interface Point {
+//     x:number
+// }
+// interface Point {
+//     y: number
+// }
+// const point1: Point = {
+//     x:30,
+//     y:50
+// }
+
+
+
+
