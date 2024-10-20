@@ -1,8 +1,20 @@
 import { Box, Button, TextField } from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save"
-import React from "react";
+import React, { useState } from "react";
+
+
 
 const AddTodoComp = () => {
+
+  const [task, setTask]= useState("") //* Type Inference
+
+  const handleClick = ()=>{
+    console.log(task);
+    setTask("")
+  }
+
+
+
   return (
     <Box
       sx={{
@@ -15,6 +27,8 @@ const AddTodoComp = () => {
         id="outlined-basic"
         label="New Todo"
         color="success"
+        value={task}
+        onChange={(e)=>setTask(e.target.value)}
         sx={{ minWidth: { xs: "100%", sm: "50%" }, height: "50px", m: 1 }}
         variant="outlined"
       />
@@ -23,6 +37,8 @@ const AddTodoComp = () => {
         color="success"
         sx={{ minWidth: { xs: "100%", sm: "15%" }, height: "55px", m: 1 }}
         endIcon={<SaveIcon/>}
+        onClick={handleClick}
+        disabled={!task.trim()}
       >
         Save Todo
       </Button>
