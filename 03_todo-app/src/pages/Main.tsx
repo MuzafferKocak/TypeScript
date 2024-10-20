@@ -27,6 +27,25 @@ const Main = () => {
     }
   };
 
+  // const addTodo = async (task:string)=> {
+  //   try {
+      
+  //   } catch (error) {
+  //     console.log(error);
+  //   }
+  // }
+
+  // type AddFn = (task:string)=> Promise<void>
+  
+  const addTodo:AddFn = async (task)=> {
+    try {
+      await axios.post(url,{task,isDone:false})
+      getTodos()
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   useEffect(() => {
    getTodos()
   }, [])
@@ -35,7 +54,7 @@ const Main = () => {
   return (
     <Container>
       <Header />
-      <AddTodoComp/>
+      <AddTodoComp addTodo={addTodo}/>
     </Container>
   );
 };
