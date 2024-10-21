@@ -1,0 +1,31 @@
+
+
+.myscrool::-webkit-scrollbar {
+    width: 8px;  /* scrollbar witdh */
+  }
+
+  .scrool-progress::-webkit-scrollbar-thumb {
+    background-color: purple; /* scrollbar farbe */
+    border-radius: 6px; /* scrollbar radius */
+  }
+
+  .scrool-completed::-webkit-scrollbar-thumb {
+    background-color: green; /* scrollbar farbe */
+    border-radius: 6px; /* scrollbar radius */
+  }
+
+  .myscrool::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* scrollbar farbe bei hover */
+  }
+
+  .myscrool::-webkit-scrollbar-track {
+    background: #f1f1f1; /* scrollbar hintergrund farbe */
+  }
+
+  .title {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+    padding-top: 0.5rem;
+  }

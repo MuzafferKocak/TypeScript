@@ -2,7 +2,6 @@ import { Box, Button, TextField } from "@mui/material";
 import SaveIcon from "@mui/icons-material/Save";
 import React, { useState } from "react";
 
-
 //! 1.Weg
 // const AddTodoComp = ({addTodo}:{addTodo:(task:string)=>Promise<void>}) => {
 //   const [task, setTask] = useState(""); //* Type Inference
@@ -47,14 +46,14 @@ import React, { useState } from "react";
 //! 2.Weg
 interface IAddTodoComp {
   // addTodo:(task:string)=>Promise<void>
-  addTodo: AddFn
+  addTodo: AddFn;
 }
-const AddTodoComp = ({addTodo}:IAddTodoComp) => {
+const AddTodoComp = ({ addTodo }: IAddTodoComp) => {
   const [task, setTask] = useState(""); //* Type Inference
 
   const handleClick = () => {
     console.log(task);
-    addTodo(task)
+    addTodo(task);
     setTask("");
   };
 

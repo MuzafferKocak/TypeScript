@@ -14,14 +14,15 @@ interface ITodoListItem extends ITodoListFn {
 const TodoListItem: FC<ITodoListItem> = ({ todo, deleteTodo, toggleTodo }) => {
   return (
     <ListItem
-      disableGutters
+      disableGutters 
+      sx={{padding: "0.5rem", cursor: "pointer"}}
       secondaryAction={
         <IconButton aria-label="comment">
-          <DeleteIcon onClick={()=>deleteTodo(todo.id)} />
+          <DeleteIcon sx={{"&:hover":{color: "red"}}} onClick={()=>deleteTodo(todo.id)} />
         </IconButton>
       }
     >
-      <ListItemText primary={todo.task} onClick={()=>toggleTodo(todo)} />
+      <ListItemText sx={{wordWrap: "break-word"}} primary={todo.task} onClick={()=>toggleTodo(todo)} />
     </ListItem>
   );
 };
