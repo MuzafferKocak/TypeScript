@@ -15,8 +15,6 @@ import { notify, SweetIcon, SweetPosition } from "../helper/sweetAlert";
 // }
 const url = "https://6618e8ca9a41b1b3dfbe4853.mockapi.io/todos";
 
-
-
 const Main = () => {
   // const [todos, setTodos] = useState([] as ITodoType[])
   // const [todos, setTodos] = useState<Array<ITodoType>>([])
@@ -26,7 +24,7 @@ const Main = () => {
   const getTodos = async () => {
     try {
       const { data } = await axios<ITodoType[]>(url);
-      setTodos(data)
+      setTodos(data);
     } catch (error) {
       console.log(error);
     }
@@ -34,7 +32,7 @@ const Main = () => {
 
   // const addTodo = async (task:string)=> {
   //   try {
-      
+
   //   } catch (error) {
   //     console.log(error);
   //   }
@@ -42,46 +40,42 @@ const Main = () => {
 
   // type AddFn = (task:string)=> Promise<void>
 
-  const addTodo:AddFn = async (task)=> {
+  const addTodo: AddFn = async (task) => {
     try {
-      await axios.post(url,{task,isDone:false})
-      notify("Todo Created!",SweetIcon.SUCCESS, SweetPosition.Center)
-      getTodos()
+      await axios.post(url, { task, isDone: false });
+      notify("Todo Created!", SweetIcon.SUCCESS, SweetPosition.Center);
+      getTodos();
     } catch (error) {
       console.log(error);
     }
-  }
-  const toggleTodo:ToggleFn = async (todo)=> {
+  };
+  const toggleTodo: ToggleFn = async (todo) => {
     try {
-      await axios.put(`${url}/${todo.id}`,{...todo, isDone:!todo.isDone})
-      
+      await axios.put(`${url}/${todo.id}`, { ...todo, isDone: !todo.isDone });
     } catch (error) {
       console.log(error);
-    }finally{
-      getTodos()
+    } finally {
+      getTodos();
     }
-  }
-  const deleteTodo:DeleteFn = async (id)=> {
+  };
+  const deleteTodo: DeleteFn = async (id) => {
     try {
-      await axios.delete(`${url}/${id}`)
-      
+      await axios.delete(`${url}/${id}`);
     } catch (error) {
       console.log(error);
-    }finally{
-      getTodos()
+    } finally {
+      getTodos();
     }
-  }
-
+  };
 
   useEffect(() => {
-   getTodos()
-  }, [])
-  
+    getTodos();
+  }, []);
 
   return (
     <Container>
       <Header />
-      <AddTodoComp addTodo={addTodo}/>
+      <AddTodoComp addTodo={addTodo} />
       <TodoList todos={todos} deleteTodo={deleteTodo} toggleTodo={toggleTodo} />
     </Container>
   );

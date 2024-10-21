@@ -1,7 +1,7 @@
 import { Grid2, Typography } from "@mui/material";
 import React from "react";
 import TodoListItem from "./TodoListItem";
-import "./style.css"
+import "./style.css";
 
 // interface ITodoList {
 //   todos: ITodoType[];
@@ -39,7 +39,14 @@ const TodoList: React.FC<ITodoList> = ({ todos, deleteTodo, toggleTodo }) => {
           borderRadius: "0.4rem",
         }}
       >
-        <Typography className="title" color="secondary" align="center" variant="h4" >In Progress Todos</Typography>
+        <Typography
+          className="title"
+          color="secondary"
+          align="center"
+          variant="h4"
+        >
+          In Progress Todos
+        </Typography>
         {progressTodos.length ? (
           progressTodos.map((todo) => (
             <TodoListItem
@@ -50,7 +57,9 @@ const TodoList: React.FC<ITodoList> = ({ todos, deleteTodo, toggleTodo }) => {
             />
           ))
         ) : (
-          <Typography color="error" mt={3}>No Progress Todos!</Typography>
+          <Typography color="error" mt={3}>
+            No Progress Todos!
+          </Typography>
         )}
       </Grid2>
       <Grid2
@@ -65,7 +74,14 @@ const TodoList: React.FC<ITodoList> = ({ todos, deleteTodo, toggleTodo }) => {
           borderRadius: "0.4rem",
         }}
       >
-        <Typography className="title" sx={{color: "green"}} align="center" variant="h4" >Completed Todos</Typography>
+        <Typography
+          className="title"
+          sx={{ color: "green" }}
+          align="center"
+          variant="h4"
+        >
+          Completed Todos
+        </Typography>
         {completedTodos.length ? (
           completedTodos.map((todo) => (
             <TodoListItem
@@ -76,7 +92,9 @@ const TodoList: React.FC<ITodoList> = ({ todos, deleteTodo, toggleTodo }) => {
             />
           ))
         ) : (
-          <Typography color="error" mt={3}>No Completed Todos!</Typography>
+          <Typography color="error" mt={3}>
+            No Completed Todos!
+          </Typography>
         )}
       </Grid2>
     </Grid2>
